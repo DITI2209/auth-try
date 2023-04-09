@@ -47,7 +47,7 @@ def create_account():
                 auth.send_email_verification(new_user['idToken'])
                 return render_template('verify_email.html')
             else:
-                existing_account = "This email id has already been used"
+                existing_account = "This Email id has already been used"
                 return render_template('create_account.html', exist_msg=existing_account)
 
 if __name__ == '__main__':
